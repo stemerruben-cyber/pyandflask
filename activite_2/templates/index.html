@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Boule magique</title>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #1B211A; /* Dark greenish-black */
+        --color-secondary: #628141; /* Olive green */
+        --color-accent: #8BAE66; /* Light green */
+        --color-background: #EBD5AB; /* Beige */
+      }
+      body {
+        background-image: url('/static/bg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: var(--color-primary);
+        font-family: 'Brainjets', sans-serif;
+        text-align: center;
+      }
+      h1 {
+        color: var(--color-secondary);
+      }
+      .button-57 {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid var(--color-primary);
+        color: var(--color-primary);
+        display: inline-block;
+        font-size: 15px;
+        line-height: 15px;
+        padding: 18px 18px 17px;
+        text-decoration: none;
+        cursor: pointer;
+        background: var(--color-accent);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      .button-57 span:first-child {
+        position: relative;
+        transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+        z-index: 10;
+      }
+
+      .button-57 span:last-child {
+        color: var(--color-background);
+        display: block;
+        position: absolute;
+        bottom: 0;
+        transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+        z-index: 100;
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        transform: translateY(225%) translateX(-50%);
+        height: 14px;
+        line-height: 13px;
+      }
+
+      .button-57:after {
+        content: "";
+        position: absolute;
+        bottom: -50%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-secondary);
+        transform-origin: bottom center;
+        transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+        transform: skewY(9.3deg) scaleY(0);
+        z-index: 50;
+      }
+
+      .button-57:hover:after {
+        transform-origin: bottom center;
+        transform: skewY(9.3deg) scaleY(2);
+      }
+
+      .button-57:hover span:last-child {
+        transform: translateX(-50%) translateY(-100%);
+        opacity: 1;
+        transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+      }
+
+      input[type="text"] {
+        border: 1px solid var(--color-primary);
+        padding: 10px;
+        font-size: 15px;
+        margin: 10px 0;
+        width: 300px;
+        background: var(--color-accent);
+        color: var(--color-primary);
+      }
+
+      input[type="text"]:focus {
+        outline: none;
+        border-color: var(--color-secondary);
+      }
+    </style>
+  </head>
+  <body>
+    <div style="padding: 100px;">
+  <div class="w-full flex flex-col gap-6"
+     style="background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid black;">
+
+  <!-- ROW 1 : TITLE -->
+  <div class="w-full"
+       style="background: rgba(255, 255, 255, 0.2);
+              backdrop-filter: blur(5px);
+              border-radius: 15px;
+              padding: 20px;">
+    <h1 class="text-4xl font-bold">Boule Magique</h1>
+  </div>
+
+  <!-- ROW 2 : IMAGE LEFT / INPUT RIGHT -->
+  <div class="flex">
+    <!-- IMAGE -->
+    <div class="w-1/2 flex justify-center items-center">
+      <img src="/static/cristal.jpg"
+           alt="Boule magique"
+           style="border-radius: 10px;
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+    </div>
+
+    <!-- FORM -->
+    <div class="w-1/2 flex flex-col items-start"
+         style="background: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(5px);
+                border-radius: 15px;
+                padding: 20px;
+                justify-content: center;">
+
+      <div class="w-full flex flex-col items-center" style="padding-bottom: 40px;">
+        <p class="mb-4 text-lg font-medium">
+        Entrez votre question ci-dessous et cliquez sur "Envoyer".
+      </p>
+      </div>
+      
+
+      <form action="/" method="post" class="flex flex-col items-center w-full">
+        <input type="text"
+               name="question"
+               placeholder="Posez votre question ici..."
+               class="w-full mb-3"
+               style="border-radius: 10px;
+                      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+        <button class="button-57" type="submit">
+          <span class="text">Envoyer</span><span>Click here</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ROW 3 : EXTRA DIV -->
+  <div class="w-full"
+       style="background: rgba(255, 255, 255, 0.15);
+              backdrop-filter: blur(5px);
+              border-radius: 15px;
+              padding: 20px;">
+    <p class="text-center font-medium">
+      {{ answer}}
+    </p>
+  </div>
+
+</div>
+</div>
+</body>
+</html>
