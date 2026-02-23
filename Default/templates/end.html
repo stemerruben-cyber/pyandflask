@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pressed Buttons</title>
+</head>
+<body>
+    <h1>Buttons You Pressed</h1>
+    <ul>
+        {% for button in pressed_list %}
+        <li>Button {{ button }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
