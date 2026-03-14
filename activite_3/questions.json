@@ -1,0 +1,19 @@
+{
+    "quiz": [
+        {
+            "question": "2 + 2 = ?",
+            "answers": ["3", "4", "5"],
+            "correct": "4"
+        },
+        {
+            "question": "5 + 3 = ?",
+            "answers": ["7", "8", "9"],
+            "correct": "8"
+        },
+        {
+            "question": "10 - 7 = ?",
+            "answers": ["2", "3", "4"],
+            "correct": "3"
+        }
+    ]
+}
