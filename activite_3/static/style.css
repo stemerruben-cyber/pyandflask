@@ -247,3 +247,11 @@ video {
     gap: 20px;
     padding:20px;
 }
+
+form div {
+    display: inline-block; /* Align radio buttons and labels next to each other */
+    margin-right: 15px; /* Add spacing between options */
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 5px 10px;
+}
