@@ -14,6 +14,31 @@
             "question": "10 - 7 = ?",
             "answers": ["2", "3", "4"],
             "correct": "3"
+        },
+        {
+            "question": "7 * 3 = ?",
+            "answers": ["19", "21", "24"],
+            "correct": "21"
+        },
+        {
+            "question": "20 / 4 = ?",
+            "answers": ["4", "5", "6"],
+            "correct": "5"
+        },
+        {
+            "question": "15 + 12 = ?",
+            "answers": ["25", "27", "29"],
+            "correct": "27"
+        },
+        {
+            "question": "100 - 35 = ?",
+            "answers": ["60", "65", "70"],
+            "correct": "65"
+        },
+        {
+            "question": "8 * 5 = ?",
+            "answers": ["35", "40", "45"],
+            "correct": "40"
         }
     ]
 }
