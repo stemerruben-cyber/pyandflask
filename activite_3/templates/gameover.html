@@ -9,6 +9,21 @@
 <body>
     <div class="container">
         <h1>Game Over</h1>
+        
+        {% if answers %}
+        <div class="answers-summary">
+            <h2>Your Answers:</h2>
+            <ul>
+                {% for answer in answers %}
+                <li>
+                    <strong>Q: {{ answer.question }}</strong><br>
+                    <strong>Your answer:</strong> {{ answer.selected }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        
         <a href="/">Try Again</a>
     </div>
 </body>
