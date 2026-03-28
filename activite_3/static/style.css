@@ -171,6 +171,27 @@ button:hover {
     border-radius: 30px;
 }
 
+a {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 12px 20px; 
+    font-size: 14px; 
+    border: none; 
+    border-radius: 5px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+a:hover {
+    box-shadow: rgba(46, 240, 46, 0.4) -5px 5px,
+                rgba(46, 240, 46, 0.3) -10px 10px,
+                rgba(46, 240, 46, 0.2) -15px 15px,
+                rgba(46, 240, 46, 0.1) -20px 20px;
+    transform: translateY(-5px);
+    border-radius: 30px;
+}
+
 /* ========================= */
 /* PARAGRAPHS */
 /* ========================= */

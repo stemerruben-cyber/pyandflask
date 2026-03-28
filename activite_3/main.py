@@ -52,10 +52,12 @@ def win():
 
 @app.route('/gameover')
 def gameover():
+    
     return render_template('gameover.html', answers=session.get('answers', []))
 
 @app.route("/index")
 def indextest():
+    session['answers'] = []
     return render_template('index.html')
 
 if __name__ == '__main__':
